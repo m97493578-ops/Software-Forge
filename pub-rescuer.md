@@ -14,10 +14,8 @@ Don't let proprietary updates hold your old layouts hostage. This utility safely
 
 ### Technical Specifications
 
-*   **Architecture:** Optimized C# Compiled Binary Engine (.NET 8.0 Runtime Integrated)
-*   **Deployment Profile:** 100% Standalone JIT-Managed Self-Extracting Windows Executable
+*   **Architecture:** Optimized C# Compiled Binary Engine (.NET 10.0 Runtime Integrated)
 *   **System Requirements:** Windows 64-bit Architecture (Zero dependencies required)
-*   **Memory Handling:** Safe programmatic exception handling protects CPU threads from crashes
 
 ---
 © 2026 Free Software Commons. Built outside corporate walls.
