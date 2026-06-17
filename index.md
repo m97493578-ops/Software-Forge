@@ -11,6 +11,7 @@ Welcome to my independent web platform hosted safely outside corporate walls. I 
 *   **[Microslop Pub Rescuer](1.md)**
 *   **[Qemu Portable](2.md)**
 *   **[ResourceHacker Portable](3.md)**
+*   **[WinRAR Portable](4.md)**
 
 ---
 © 2026 Free Software Commons. Developed independently.
