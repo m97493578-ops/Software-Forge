@@ -9,7 +9,7 @@ Welcome to my independent web platform hosted safely outside corporate walls. I 
 ### Current Deployments
 
 *   **[Microslop Pub Rescuer](1.md)**
-* ** **[Qemu Portable](2.md)**
+*   **[Qemu Portable](2.md)**
 
 ---
 © 2026 Free Software Commons. Developed independently.
