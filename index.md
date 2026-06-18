@@ -13,7 +13,7 @@ Welcome to my independent web platform hosted safely outside corporate walls. I 
 *   **[ResourceHacker Portable](3.md)**
 *   **[WinRAR Portable](4.md)**
 *   **[OBS Portable](5.md)**
-*   **[Chromium Portable](6.md)
+*   **[Chromium Portable](6.md)**
 
 ---
 © 2026 Free Software Commons. Developed independently.
