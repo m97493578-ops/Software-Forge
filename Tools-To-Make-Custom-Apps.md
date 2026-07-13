@@ -2,8 +2,8 @@
 
 ***
 
-### [Download Installer Generater](https://github.com/m97493578-ops/Software-Forge/releases/download/Tools-To-Make-Custom-Apps/Software-Forge-Installer.paf.exe)
-### [Download Launcher Generater](https://github.com/m97493578-ops/Software-Forge/releases/download/Tools-To-Make-Custom-Apps/Software-Forge-Launcher.paf.exe)
+### [Download Installer Generater](https://github.com/m97493578-ops/Software-Forge/releases/download/Tools-To-Make-Custom-Apps/Software-Forge-Installer-Generater.paf.exe)
+### [Download Launcher Generater](https://github.com/m97493578-ops/Software-Forge/releases/download/Tools-To-Make-Custom-Apps/Software-Forge-Installer-Generater.paf.exe)
 
 ***
 
