@@ -8,6 +8,7 @@ Want to help build more portable tools like this? Download these two tools **[To
 *   **[VLC Media Player](VLC.md)**
 *   **[Blender](Blender.md)**
 *   **[Blender Compact (Windows 7/8 Compatibility Build)](BlenderCompact.md)**
+*   **[7-Zip Portable](7-Zip.md)**
 
 ---
 © 2026 Free Software Commons. Developed independently.
