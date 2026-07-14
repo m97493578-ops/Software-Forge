@@ -5,7 +5,7 @@ Want to help build more portable tools like this? Download these two tools **[To
 
 ### Site Pages
 * **[👉 Explore All Apps](App.md)**
-* **[Forums](ComingSoon.md)**
+* **[Visit The Forums](Fourm.md)**
 
 ### 📢 Latest Updates
 * **July 2026**: Launched our official standalone **[App Directory](App.md)**! Moved all utilities to a dedicated tab for a cleaner, faster homepage interface.
