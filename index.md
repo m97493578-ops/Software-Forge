@@ -1,5 +1,3 @@
-# Software Forge
-
 ---
 
 ## Independent Open Source Projects
