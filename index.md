@@ -10,6 +10,7 @@ Want to help build more portable tools like this? Download these two tools to ge
 ### Current Deployments
 *   **[Tools To Make Custom Apps](Tools-To-Make-Custom-Apps.md)**
 *   **[VLC Media Player](VLC.md)**
+*   **[Blender](Blender.md)**
 
 ---
 © 2026 Free Software Commons. Developed independently.
