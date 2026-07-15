@@ -1,3 +1,4 @@
+<script src="theme.js"></script>
 [← Back to Dashboard](index.md)
 
 [← Back to App Directory](App.md)

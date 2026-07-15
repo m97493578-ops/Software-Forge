@@ -2,6 +2,7 @@
 layout: default
 title: Community Forum
 ---
+<script src="theme.js"></script>
 
 [← Back to Dashboard](index.md)
 
@@ -28,4 +29,5 @@ Feel free to start a thread below to ask questions, suggest new portable apps, r
 </script>
 
 ---
+
 
