@@ -1,5 +1,7 @@
 [← Back to Dashboard](index.md)
 
+[← Back to App Directory](App.md)
+
 App Notes
 
 Make More Portable: You can make Chromium more portable by copying the AppNamePortable.ini from the ChromiumPortable\Other\Source directory to the ChromiumPortable directory and renaming it to ChromiumPortable.ini. Open it in your favorite text editor and change the line that reads AdditionalParameters= to AdditionalParameters=--disable-encryption --disable-machine-id and then saving it. You should do this with a new profile and change these settings within the advanced config in the app, too. This should make it portable but will result in your passwords being stored unencrypted and your Chrome settings vulnerable to modification by outside apps.
