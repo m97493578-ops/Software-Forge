@@ -7,7 +7,7 @@ Want to help build more portable tools like this? Download these two tools **[To
 
 ### Site Pages
 * **[👉 Explore All Apps](App.md)**
-* **[Visit The Forums](Fourm.md)**
+* **[Visit The Forums](Forum.md)**
 
 ---
 © 2026 Free Software Commons. Developed independently.
