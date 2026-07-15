@@ -12,5 +12,7 @@ Please head back to our main index to explore our active software tools!
 
 ### [🏠 Return to Homepage](index.md)
 
+### [🏠 Return to App Page](App.md)
+
 © 2026 Free Software Commons. Developed independently.
 
