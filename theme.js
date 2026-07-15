@@ -1,16 +1,8 @@
 (function() {
-  // 1. Define and inject the CSS rules into the document head
+  // 1. Define and inject CSS rules into the page head
   const css = `
-    :root {
-      --bg-color: #ffffff;
-      --text-color: #24292f;
-      --btn-bg: #f6f8fa;
-    }
-    body.dark-theme {
-      --bg-color: #0d1117;
-      --text-color: #c9d1d9;
-      --btn-bg: #21262d;
-    }
+    :root { --bg-color: #ffffff; --text-color: #24292f; --btn-bg: #f6f8fa; }
+    body.dark-theme { --bg-color: #0d1117; --text-color: #c9d1d9; --btn-bg: #21262d; }
     body {
       background-color: var(--bg-color) !important;
       color: var(--text-color) !important;
@@ -30,26 +22,34 @@
     body.dark-theme .icon-dark { display: none; }
     body:not(.dark-theme) .icon-light { display: none; }
   `;
-
   const styleTag = document.createElement('style');
   styleTag.appendChild(document.createTextNode(css));
   document.head.appendChild(styleTag);
 
-  // 2. Check local storage and apply dark mode immediately before page render
+  // 2. Check local storage and apply dark mode state instantly
   const savedTheme = localStorage.getItem('site-theme') || 
                      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
   if (savedTheme === 'dark') {
     document.body.classList.add('dark-theme');
   }
 
-  // 3. Set up click behavior when the HTML elements finish loading
-  document.addEventListener("DOMContentLoaded", function() {
-    const btn = document.getElementById('theme-toggle');
-    if (btn) {
-      btn.addEventListener('click', () => {
-        const isDark = document.body.classList.toggle('dark-theme');
-        localStorage.setItem('site-theme', isDark ? 'dark' : 'light');
-      });
-    }
+  // 3. Automatically inject the button HTML exactly where the script tag sits
+  const currentScript = document.currentScript;
+  const btn = document.createElement('button');
+  btn.id = 'theme-toggle';
+  btn.className = 'theme-btn';
+  btn.setAttribute('aria-label', 'Toggle dark mode');
+  btn.innerHTML = `
+    <span class="icon-light">☀️ Light Mode</span>
+    <span class="icon-dark">🌙 Dark Mode</span>
+  `;
+  
+  // Inserts the button right into the document flow
+  currentScript.parentNode.insertBefore(btn, currentScript);
+
+  // 4. Handle button clicks
+  btn.addEventListener('click', () => {
+    const isDark = document.body.classList.toggle('dark-theme');
+    localStorage.setItem('site-theme', isDark ? 'dark' : 'light');
   });
 })();
