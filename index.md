@@ -1,5 +1,4 @@
 <script src="theme.js"></script>
-<script src="theme.js"></script>
 
 ## Independent Open Source Projects
 
