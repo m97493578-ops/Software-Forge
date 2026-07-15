@@ -7,9 +7,5 @@ Want to help build more portable tools like this? Download these two tools **[To
 * **[👉 Explore All Apps](App.md)**
 * **[Visit The Forums](Fourm.md)**
 
-### 📢 Latest Updates
-* **July 2026**: Launched our official standalone **[App Directory](App.md)**! Moved all utilities to a dedicated tab for a cleaner, faster homepage interface.
-
-
 ---
 © 2026 Free Software Commons. Developed independently.
