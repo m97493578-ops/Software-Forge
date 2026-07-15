@@ -19,7 +19,6 @@ Welcome to our independent software catalog. Every application listed below is b
 *   **[Blender Compact (Windows 7/8 Compatibility Build)](BlenderCompact.md)**
 *   **[7-Zip Portable](7-Zip.md)**
 *   **[ChromiumPortable](ChromiumPortable.md)**
----
 
 ### Our Infrastructure Promise
 We will Always be letting you awesome people download and make your own portable apps. These contain the source code and the pre-compiled versions for **[Tools To Make Custom Apps](Tools-To-Make-Custom-Apps.md)**
