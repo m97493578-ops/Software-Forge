@@ -8,8 +8,8 @@
 ## ⚖️ Open Source License & Source Code Notice
 This application is distributed as free software under the protections of the GNU General Public License (GPLv2 or later), with core engine libraries subject to the GNU Lesser General Public License (LGPLv2.1 or later). In full compliance with free software copyleft distribution guidelines:
 
-* **Official Terms**: You can read the original legal copyleft definitions and licensing rules at the [Official VideoLAN Legal Documentation](https://videolan.org).
-* **Source Code Access**: In compliance with open distribution obligations, the raw un-compiled source code files for this multimedia engine version can be downloaded directly from the [Official VideoLAN Source Archives](https://videolan.org) or the public [VideoLAN GitHub Repository Mirror](https://github.com).
+* **Official Terms**: You can read the original legal copyleft definitions and licensing rules at the [Official VideoLAN Legal Documentation](https://www.videolan.org/legal.html).
+* **Source Code Access**: In compliance with open distribution obligations, the raw un-compiled source code files for this multimedia engine version can be downloaded directly from the public [VideoLAN GitHub Repository Mirror](https://github.com/videolan/vlc).
 
 *This notice satisfies mandatory copyleft attribution requirements while guaranteeing complete user code inspection freedoms.*
 
