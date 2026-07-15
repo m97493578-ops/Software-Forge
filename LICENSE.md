@@ -2,7 +2,6 @@
 layout: default
 title: License
 ---
-<script src="theme.js"></script>
 
                     GNU AFFERO GENERAL PUBLIC LICENSE
                        Version 3, 19 November 2007
