@@ -1,5 +1,7 @@
 [← Back to Dashboard](index.md)
 
+[← Back to App Directory](App.md)
+
 ***
 
 ### [Download Installer Generator](https://github.com/m97493578-ops/Software-Forge/releases/download/Tools-To-Make-Custom-Apps/Installer-Generator_Portable_Setup.paf.exe)
