@@ -8,8 +8,6 @@ title: App Directory
 
 # Software Forge Directory 🚀
 
-Welcome to our independent software catalog. Every application listed below is built entirely with native frameworks, compiled for maximum local efficiency, and contains **absolute zero telemetry**.
-
 ---
 
 ### Available Deployments
