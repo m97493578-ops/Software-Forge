@@ -23,7 +23,7 @@ This application is distributed as free and open-source software under its respe
 > Get-FileHash .\YourDownloadedFile.paf.exe -Algorithm SHA256
 > 
 > 
-> **The app's checksum when it was compiled is:** `d7a8b5ba6663adecf96a8977486c5e0c4998335e96d18f3c0e8e30ec9bde722f`
+> **The app's checksum when it was compiled is:** `4c2f257bd7e4911be3fd6e6840c9fff1659dafd5296562ffce8026e1596f6c2d`
 > 
 > If your PowerShell output matches this hash exactly, your file is 100% safe, authentic, and untampered with!
 > 
