@@ -13,5 +13,21 @@ This application is distributed as free and open-source software under its respe
 
 *This notice is provided to satisfy mandatory attribution requirements and to guarantee user data inspection freedoms.*
 
+> ### 🔒 Safety & Integrity Note
+>
+> Because **Software Forge** is an independent, open-source project, we unfortunately cannot afford the high annual cost of a commercial Code Signing Certificate. As a result, Windows SmartScreen may flag these downloads as being from an "Unknown Publisher."
+> 
+> To guarantee that your files are safe, authentic, and have not been modified or corrupted, you can verify them manually using PowerShell:
+> 
+> ```powershell
+> Get-FileHash .\YourDownloadedFile.paf.exe -Algorithm SHA256
+> ```
+> 
+> **The app's checksum when it was compiled is:** `7e96140a959dd464c571fc8817cd8543c272cb8d23cfbffb10b4ae85680677d2`
+> 
+> If your PowerShell output matches this hash exactly, your file is 100% safe, authentic, and untampered with!
+> 
+> ⚠️ **Important:** If the checksums **do not match**, do not run the executable. It means the download was corrupted or modified. Please delete the file immediately and post a comment on our forums to let us know so we can fix it!
+
 ---
 © 2026 Free Software Commons. Built outside corporate walls.
