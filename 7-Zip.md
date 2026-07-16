@@ -19,9 +19,7 @@ This application is distributed as free and open-source software under its respe
 > 
 > To guarantee that your files are safe, authentic, and have not been modified or corrupted, you can verify them manually using PowerShell:
 > 
-> ```powershell
-> Get-FileHash .\YourDownloadedFile.paf.exe -Algorithm SHA256
-> ```
+> `Get-FileHash .\YourDownloadedFile.paf.exe -Algorithm SHA256`
 > 
 > **The app's checksum when it was compiled is:** `7e96140a959dd464c571fc8817cd8543c272cb8d23cfbffb10b4ae85680677d2`
 > 
