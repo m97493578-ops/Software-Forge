@@ -4,6 +4,8 @@ title: App Directory
 ---
 <script src="theme.js"></script>
 
+<script src="search.js"></script>
+
 [← Back to Dashboard](index.md)
 
 # Software Forge Directory 🚀
