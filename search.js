@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const styleBlock = document.createElement("style");
     styleBlock.textContent = `
         .forge-search-container {
-            margin: 25px 0;
+            margin: 25px 0 10px 0;
             max-width: 600px;
         }
         .forge-search-input {
@@ -17,31 +17,51 @@ document.addEventListener("DOMContentLoaded", async () => {
             border: 1px solid #333333;
             border-radius: 6px;
             outline: none;
-            transition: border-color 0.2s ease, box-shadow 0.2s ease;
             box-sizing: border-box;
         }
         .forge-search-input:focus {
             border-color: #00bc8c;
             box-shadow: 0 0 5px rgba(0, 188, 140, 0.3);
         }
-        .app-list li {
-            transition: opacity 0.15s ease;
+        .forge-results-wrapper {
+            margin: 15px 0 25px 0;
+            display: block; /* Forces block execution layout */
+            clear: both;
+        }
+        .forge-search-result-item {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #222;
+            display: block;
+        }
+        .forge-result-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #00bc8c;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+        .forge-result-title:hover {
+            text-decoration: underline;
+        }
+        .forge-result-desc {
+            font-size: 14px;
+            color: #aaaaaa;
+            margin: 0;
+            line-height: 1.5;
+            display: block;
         }
     `;
     document.head.appendChild(styleBlock);
 
     // =========================================================================
-    // 2. RUNTIME HTML INTERFACE INJECTION
+    // 2. INTERFACE & WRAPPER INJECTION
     // =========================================================================
-    // Looks for your link container list automatically
-    const appList = document.querySelector("ul") || document.querySelector("ol") || document.querySelector(".app-list");
-    
-    if (!appList) {
-        console.error("Software-Forge Search Error: App list container element not found.");
-        return;
-    }
+    const targetHeader = document.querySelector("h3") || document.getElementById("available-deployments");
+    if (!targetHeader) return;
 
-    // Build elements cleanly in system memory to maximize security
+    // Create Search Bar
     const searchContainer = document.createElement("div");
     searchContainer.className = "forge-search-container";
 
@@ -49,45 +69,59 @@ document.addEventListener("DOMContentLoaded", async () => {
     searchInput.type = "text";
     searchInput.id = "forge-search";
     searchInput.className = "forge-search-input";
-    searchInput.placeholder = "Fuzzy search apps (tolerates typos)...";
+    searchInput.placeholder = "Search apps...";
 
     searchContainer.appendChild(searchInput);
-    
-    // Inject the generated search bar right above your list array block
-    appList.parentNode.insertBefore(searchContainer, appList);
+    targetHeader.parentNode.insertBefore(searchContainer, targetHeader.nextSibling);
 
-    // =========================================================================
-    // 3. LEVENSHTEIN FUZZY MATCHING LOGIC
-    // =========================================================================
-    let searchData = [];
+    // Create a block-level results wrapper right after the search input container
+    const resultsWrapper = document.createElement("div");
+    resultsWrapper.className = "forge-results-wrapper";
+    searchContainer.parentNode.insertBefore(resultsWrapper, searchContainer.nextSibling);
 
-    // Pull your pre-compiled clean layout configuration data
-    try {
-        const response = await fetch("search_index.json");
-        searchData = await response.json();
-    } catch (err) {
-        console.error("Software-Forge Search Error: Could not read search_index.json.");
-        return;
-    }
+    // Grab all current apps from your bold markdown text blocks
+    const paragraphItems = document.querySelectorAll("p strong a");
+    const appElementsData = [];
 
-    // Mathematical Edit Distance function (Calculates typo proximity thresholds)
-    function getEditDistance(s1, s2) {
-        s1 = s1.toLowerCase();
-        s2 = s2.toLowerCase();
-        const costs = [];
+    paragraphItems.forEach((anchor) => {
+        const parentParagraph = anchor.closest("p");
+        if (!parentParagraph) return;
+
+        const linkHref = anchor.getAttribute("href") || "";
+        if (linkHref.includes("App2.html") || linkHref.includes("index.html")) return;
+
+        const appName = anchor.textContent.trim();
         
+        // Dynamic description catcher: grabs text or sets a default
+        let appDescription = "Independent portable software utility build compiled for Software-Forge.";
+        if (parentParagraph.nextElementSibling && parentParagraph.nextElementSibling.tagName === "P") {
+            appDescription = parentParagraph.nextElementSibling.textContent.trim();
+        }
+
+        appElementsData.push({
+            name: appName,
+            url: linkHref,
+            description: appDescription,
+            originalElement: parentParagraph
+        });
+    });
+
+    // =========================================================================
+    // 3. LEVENSHTEIN DISTANCE FUZZY ENGINE
+    // =========================================================================
+    function getEditDistance(s1, s2) {
+        s1 = s1.toLowerCase(); s2 = s2.toLowerCase();
+        const costs = [];
         for (let i = 0; i <= s1.length; i++) {
             let lastValue = i;
             for (let j = 0; j <= s2.length; j++) {
-                if (i === 0) {
-                    costs[j] = j;
-                } else if (j > 0) {
+                if (i === 0) costs[j] = j;
+                else if (j > 0) {
                     let newValue = costs[j - 1];
                     if (s1.charAt(i - 1) !== s2.charAt(j - 1)) {
                         newValue = Math.min(Math.min(newValue, lastValue), costs[j]) + 1;
                     }
-                    costs[j - 1] = lastValue;
-                    lastValue = newValue;
+                    costs[j - 1] = lastValue; lastValue = newValue;
                 }
             }
             if (i > 0) costs[s2.length] = lastValue;
@@ -95,48 +129,70 @@ document.addEventListener("DOMContentLoaded", async () => {
         return costs[s2.length];
     }
 
-    // Monitor input changes to dynamically show or hide entries
+    // =========================================================================
+    // 4. DYNAMIC SEARCH INPUT EVENT
+    // =========================================================================
     searchInput.addEventListener("input", (e) => {
         const query = e.target.value.toLowerCase().trim();
-        const listItems = appList.querySelectorAll("li");
+        
+        // Clear previous results block entirely
+        resultsWrapper.innerHTML = "";
 
-        listItems.forEach((item, index) => {
-            const appInfo = searchData[index];
-            if (!appInfo) return; // Fallback validation safeguard
-
-            const targetTitle = appInfo.title.toLowerCase();
-
-            // Scenario A: Input field cleared out completely -> Show everything
-            if (query === "") {
-                item.style.display = "block";
-                return;
-            }
-
-            // Scenario B: Exact match or clear partial match -> Skip distance check
-            if (targetTitle.includes(query)) {
-                item.style.display = "block";
-                return;
-            }
-
-            // Scenario C: Evaluate character differences across strings and separate words
-            const words = targetTitle.split(/\s+/);
-            let closestDistance = 999;
-
-            words.forEach(word => {
-                const dist = getEditDistance(query, word);
-                if (dist < closestDistance) closestDistance = dist;
+        // If search box is empty, show original links and let page structure settle naturally
+        if (query === "") {
+            appElementsData.forEach(app => {
+                app.originalElement.style.display = "block";
             });
-            
-            const fullTitleDistance = getEditDistance(query, targetTitle);
-            if (fullTitleDistance < closestDistance) closestDistance = fullTitleDistance;
+            return;
+        }
 
-            // Strict threshold constraints based on query string character depth
-            const maxAllowedDistance = query.length <= 4 ? 2 : 3;
+        // Hide default static app listings completely so they don't block structural layout flow
+        appElementsData.forEach(app => {
+            app.originalElement.style.display = "none";
+        });
 
-            if (closestDistance <= maxAllowedDistance) {
-                item.style.display = "block";
+        // Evaluate matches
+        appElementsData.forEach(app => {
+            const targetTitle = app.name.toLowerCase();
+            let isMatch = false;
+
+            if (targetTitle.includes(query)) {
+                isMatch = true;
             } else {
-                item.style.display = "none";
+                const words = targetTitle.split(/\s+/);
+                let closestDistance = 999;
+
+                words.forEach(word => {
+                    const dist = getEditDistance(query, word);
+                    if (dist < closestDistance) closestDistance = dist;
+                });
+
+                const fullTitleDistance = getEditDistance(query, targetTitle);
+                if (fullTitleDistance < closestDistance) closestDistance = fullTitleDistance;
+
+                const maxAllowedDistance = query.length <= 4 ? 2 : 3;
+                if (closestDistance <= maxAllowedDistance) {
+                    isMatch = true;
+                }
+            }
+
+            // Generate block results that naturally expand and push down the text below it
+            if (isMatch) {
+                const resultItem = document.createElement("div");
+                resultItem.className = "forge-search-result-item";
+
+                const resultLink = document.createElement("a");
+                resultLink.className = "forge-result-title";
+                resultLink.href = app.url;
+                resultLink.textContent = app.name;
+
+                const resultDesc = document.createElement("p");
+                resultDesc.className = "forge-result-desc";
+                resultDesc.textContent = app.description;
+
+                resultItem.appendChild(resultLink);
+                resultItem.appendChild(resultDesc);
+                resultsWrapper.appendChild(resultItem);
             }
         });
     });
