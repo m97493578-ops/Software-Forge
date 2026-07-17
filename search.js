@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         .forge-search-container {
             margin: 25px 0 10px 0;
             max-width: 600px;
+            display: block !important;
+            position: relative !important;
         }
         .forge-search-input {
             width: 100%;
@@ -25,22 +27,25 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
         .forge-results-wrapper {
             margin: 15px 0 25px 0;
-            display: block; /* Forces block execution layout */
-            clear: both;
+            display: block !important;
+            position: relative !important;
+            clear: both !important;
+            height: auto !important; /* Force natural block height expansion */
+            visibility: visible !important;
         }
         .forge-search-result-item {
             margin-bottom: 20px;
             padding-bottom: 15px;
             border-bottom: 1px solid #222;
-            display: block;
+            display: block !important;
+            position: relative !important;
         }
         .forge-result-title {
             font-size: 18px;
             font-weight: bold;
             color: #00bc8c;
             text-decoration: none;
-            display: inline-block;
-            margin-bottom: 5px;
+            display: inline-block !important;
         }
         .forge-result-title:hover {
             text-decoration: underline;
@@ -48,9 +53,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         .forge-result-desc {
             font-size: 14px;
             color: #aaaaaa;
-            margin: 0;
+            margin: 5px 0 0 0 !important;
             line-height: 1.5;
-            display: block;
+            display: block !important;
         }
     `;
     document.head.appendChild(styleBlock);
@@ -138,17 +143,17 @@ document.addEventListener("DOMContentLoaded", async () => {
         // Clear previous results block entirely
         resultsWrapper.innerHTML = "";
 
-        // If search box is empty, show original links and let page structure settle naturally
+        // If search box is empty, restore original links and let page structure settle naturally
         if (query === "") {
             appElementsData.forEach(app => {
-                app.originalElement.style.display = "block";
+                app.originalElement.style.setProperty("display", "block", "important");
             });
             return;
         }
 
-        // Hide default static app listings completely so they don't block structural layout flow
+        // Hide default static app listings completely using forceful none execution
         appElementsData.forEach(app => {
-            app.originalElement.style.display = "none";
+            app.originalElement.style.setProperty("display", "none", "important");
         });
 
         // Evaluate matches
