@@ -5,8 +5,6 @@ title: App Directory - Page 2
 
 <script src="theme.js"></script>
 
-<script src="search.js"></script>
-
 [← Back to Page 1](App.md)
 
 # Software Forge Directory - Page 2 🚀
