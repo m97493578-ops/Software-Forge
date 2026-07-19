@@ -31,3 +31,4 @@ This application is distributed as free software under the protections of the GN
 
 ---
 © 2026 Free Software Commons. Built outside corporate walls.
+

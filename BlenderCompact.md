@@ -35,3 +35,4 @@ BlenderCompact is distributed under the terms of the GNU General Public License 
 
 ---
 © 2026 Free Software Commons. Built outside corporate walls.
+

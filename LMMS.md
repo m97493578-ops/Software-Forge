@@ -3,15 +3,13 @@
 
 [← Back to App Directory](App.md)
 
-### [Download Installer Executable](https://github.com/m97493578-ops/Software-Forge/releases/download/LibreOffice/LibreOffice_Portable_Setup.paf.exe)
+### [Download Installer Executable](https://github.com/m97493578-ops/Software-Forge/releases/download/LMMS/LMMS_Portable_Setup.paf.exe)
 
 ## ⚖️ Open Source License & Source Code Notice
-This application is distributed as free and open-source software under its respective copyleft protections. In full compliance with free software copyleft distribution guidelines and FSF compliance policies:
+This application is distributed as free and open-source software under its respective copyleft protections. In full compliance with free software distribution guidelines and FSF compliance policies:
 
-* **Official Terms**: You can read the original legal copyleft definitions and licensing rules at the [Official License Documentation](https://github.com/LibreOffice/core).
-* **Source Code Access**: In compliance with open distribution obligations, the raw un-compiled source code files for this version can be downloaded directly from the [Official Upstream Source Repository](https://gerrit.libreoffice.org/).
-
-*This notice satisfies mandatory copyleft attribution requirements while guaranteeing complete user code inspection freedoms.*
+* **Official Terms**: You can read the original legal copyleft terms for this program at the [Official Blender License Documentation](https://github.com/LMMS/lmms/blob/master/LICENSE.txt).
+* **Source Code Access**: In compliance with open distribution obligations, the raw un-compiled source code files and build assets for this version can be directly audited or downloaded from the [Official Blender Source Repository](https://github.com/LMMS/lmms).
 
 ### 🔒 Safety & Integrity Note
 
@@ -23,7 +21,7 @@ This application is distributed as free and open-source software under its respe
 > Get-FileHash .\YourDownloadedFile.paf.exe -Algorithm SHA256
 > 
 > 
-> **The app's checksum when it was compiled is:** `4c2f257bd7e4911be3fd6e6840c9fff1659dafd5296562ffce8026e1596f6c2d`
+> **The app's checksum when it was compiled is:** `fe1223bd705ab788e22c1b0b2775be5b82f2b99a1b01b0c8381ef9c24c27eaf0`
 > 
 > If your PowerShell output matches this hash exactly, your file is 100% safe, authentic, and untampered with!
 > 

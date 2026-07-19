@@ -18,3 +18,4 @@ All code here is protected by the AGPL: copy it, and you must open-source your p
 
 ---
 © 2026 Free Software Commons. Developed independently.
+

@@ -30,3 +30,4 @@ This application is distributed as free and open-source software under its respe
 > ⚠️ **Important:** If the checksums **do not match**, do not run the executable. It means the download was corrupted or modified. Please delete the file immediately and post a comment on our forums to let us know so we can investigate right away!
 ---
 © 2026 Free Software Commons. Built outside corporate walls.
+

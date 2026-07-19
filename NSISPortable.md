@@ -31,3 +31,4 @@ This application core is distributed as free and open-source software under perm
 
 ---
 © 2026 Free Software Commons. Built outside corporate walls.
+

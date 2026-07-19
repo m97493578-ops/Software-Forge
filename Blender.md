@@ -29,3 +29,4 @@ This application is distributed as free and open-source software under its respe
 
 ---
 © 2026 Free Software Commons. Built outside corporate walls.
+
