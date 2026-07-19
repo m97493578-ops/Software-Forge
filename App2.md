@@ -15,7 +15,7 @@ title: App Directory - Page 2
 * **[ClamWin Portable](ClamWin.md)**
 * **[LibreOffice Portable](LibreOffice.md)**
 * **[DVDStyler Portable](DVDStyler.md)**
-* **[LMMS Portable](LMMS.md)
+* **[LMMS Portable](LMMS.md**)
 
 ### Our Infrastructure Promise
 
