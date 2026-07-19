@@ -6,9 +6,11 @@
 ***
 
 ### [Download Installer Generator](https://github.com/m97493578-ops/Software-Forge/releases/download/Tools-To-Make-Custom-Apps/Installer-Generator_Portable_Setup.paf.exe)
-### [Download Launcher Generator](https://github.com/m97493578-ops/Software-Forge/releases/download/Tools-To-Make-Custom-Apps/Launcher-Generator_Portable_Setup.paf.exe)
+### [Download Launcher Generator](https://github.com/m97493578-ops/Software-Forge/releases/download/Tools-To-Make-Custom-Apps/Launcher-Generator_Portable_Setup.paf.exe) > ⚠️ **Warning:** The Launcher Generator is now officially deprecated. While the download remains active, this tool is no longer maintained and will be replaced soon. Use at your own risk.
+
 ### [Src for Installer Generator](https://github.com/m97493578-ops/src/releases/download/src-v1/src.for.installer.maker.7z)
-### [Src for Launcher Generator](https://github.com/m97493578-ops/src/releases/download/src-v1/src.for.Launcher-Generator.7z)
+### [Src for Launcher Generator](https://github.com/m97493578-ops/src/releases/download/src-v1/src.for.Launcher-Generator.7z) > ⚠️ **Warning:** The Launcher Generator is now officially deprecated. While the download remains active, this tool is no longer maintained and will be replaced soon. Use at your own risk.
+
 
 ### 🔒 Safety & Integrity Note
 
