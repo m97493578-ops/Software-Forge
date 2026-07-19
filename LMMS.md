@@ -8,8 +8,8 @@
 ## ⚖️ Open Source License & Source Code Notice
 This application is distributed as free and open-source software under its respective copyleft protections. In full compliance with free software distribution guidelines and FSF compliance policies:
 
-* **Official Terms**: You can read the original legal copyleft terms for this program at the [Official Blender License Documentation](https://github.com/LMMS/lmms/blob/master/LICENSE.txt).
-* **Source Code Access**: In compliance with open distribution obligations, the raw un-compiled source code files and build assets for this version can be directly audited or downloaded from the [Official Blender Source Repository](https://github.com/LMMS/lmms).
+* **Official Terms**: You can read the original legal copyleft terms for this program at the [Official LLMS License Documentation](https://github.com/LMMS/lmms/blob/master/LICENSE.txt).
+* **Source Code Access**: In compliance with open distribution obligations, the raw un-compiled source code files and build assets for this version can be directly audited or downloaded from the [Official LMMS Source Repository](https://github.com/LMMS/lmms).
 
 ### 🔒 Safety & Integrity Note
 
