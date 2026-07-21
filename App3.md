@@ -5,19 +5,13 @@ title: App Directory - Page 2
 
 <script src="theme.js"></script>
 
-[← Back to Page 1](App.md)
+[← Back to Page 2](App2.md)
 
 # Software Forge Directory - Page 2 🚀
 
 ### Available Deployments
 
-* **[NSIS Portable](NSISPortable.md)**
-* **[ClamWin Portable](ClamWin.md)**
-* **[LibreOffice Portable](LibreOffice.md)**
-* **[DVDStyler Portable](DVDStyler.md)**
-* **[LMMS Portable](LMMS.md)**
-
-**[Go to Page 3 →](App3.md)**
+* **[PeaZip Portable](PeaZipPortable.md)**
 
 ### Our Infrastructure Promise
 
